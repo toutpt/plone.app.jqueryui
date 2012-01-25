@@ -17,4 +17,11 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <browser:page
+      for="*"
+      name="plone.app.jqueryui.custom.min.js"
+      class=".resources.PloneAppJQueryUICustomJS"
+      permission="zope2.View"
+      />
+
 </configure>
