@@ -24,4 +24,14 @@
       permission="zope2.View"
       />
 
+  <browser:viewlet
+      name="l10n.datepicker"
+      for="*"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
+      class=".viewlet.L10nDatepicker"
+      permission="zope2.View"
+      />
+
+  <subscriber handler=".resources.cook_js_resources" />
+
 </configure>

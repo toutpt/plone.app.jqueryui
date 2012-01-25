@@ -90,3 +90,9 @@ class PloneAppJQueryUICustomJS(BrowserView):
             data.write(open(resource.context.path).read())
  
         return data.getvalue()
+
+@component.adapter(interfaces.IJQueryUIPlugins, IRecordModifiedEvent)
+def cook_js_resources(record, event):
+    site=component.hooks.getSite()
+    jsregistry = site.portal_javascripts
+    jsregistry.cookResources()
